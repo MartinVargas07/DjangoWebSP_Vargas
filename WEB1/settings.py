@@ -84,14 +84,13 @@ WSGI_APPLICATION = 'WEB1.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env("DB_NAME"),
-        'USER': env("DB_USER"),
-        'PASSWORD': env("DB_PASSWORD"),
-        'HOST': env("DB_HOST"),
-        'PORT': env("DB_DATABASE_PORT"),
+        'NAME': 'db_dango_web',
+        'USER': 'martin_vargas',
+        'PASSWORD': 'S4fOytU53WgP0MFg9JPp62OP3d9xyMl1',
+        'HOST': 'dpg-coebgoa0si5c739dt6e0-a',
+        'PORT': '5432',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
