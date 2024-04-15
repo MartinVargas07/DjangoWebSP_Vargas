@@ -13,6 +13,10 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 # from decouple import env
 
 import environ
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Read .env file
 env = environ.Env()
@@ -88,15 +92,12 @@ WSGI_APPLICATION = 'WEB1.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': BASE_DIR / 'db.sqlite3',
-        # Para la nueva base de datos en postgreSQL
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': env("DB_NAME"),
-        'USER': env("DB_USER"),
-        'PASSWORD': env("DB_PASSWORD"),
-        'HOST': env("DB_HOST"),
-        'DATABASE_PORT': env("DB_DATABASE_PORT"),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getenv('DB_DATABASE_PORT'),
     }
 }
 
