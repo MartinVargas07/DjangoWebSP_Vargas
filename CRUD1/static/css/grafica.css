@@ -1,0 +1,36 @@
+/* Estilos para el contenedor del gráfico */
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.datos,
+.grafica,
+.botones {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.datos, .botones {
+  margin: 20px;
+  color: white;
+  flex-basis: 20%;
+  background-color: #00156b;
+}
+
+.grafica {
+  flex-basis: 60%;
+  background-color: white;
+}
+
+#chart-container {
+  width: 800px;
+  height: 400px;
+}
+
+.botones button {
+  display: block;
+  margin-bottom: 10px;
+}

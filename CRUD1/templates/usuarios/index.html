@@ -1,0 +1,99 @@
+{% extends "predeterminados/base.html"%}
+<!-- <!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/table.css' %}" />
+    <title>INDEX</title>
+  </head>
+  {% include 'predeterminados/header.html' %}
+  <body>
+    <h1>INDEX</h1>
+    <a href="create" class="">Crear Nuevo</a>
+    <div class="table-wrapper">
+      <table class="fl-table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Nombre de usuario</th>
+            <th>Correo electronico</th>
+            <th>Telefono</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for elementos in usuarios %}
+          <tr>
+            <th>{{elementos.id}}</th>
+            <th>{{elementos.nombre}}</th>
+            <th>{{elementos.apellido}}</th>
+            <th>{{elementos.nombre_usuario}}</th>
+            <th>{{elementos.email}}</th>
+            <th>{{elementos.tfno}}</th>
+            <td>
+              <a href="{%url 'details' elementos.id%}" class="btn btn-danger"
+                >Ver mas</a
+              >
+              <a href="{%url 'edit' elementos.id%}" class="btn btn-success"
+                >Editar</a
+              >
+              <a href="{%url 'delete' elementos.id%}" class="btn btn-primary"
+                >Eliminar</a
+              >
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html> -->
+{% load static %}
+{% block titulo%} Index {%endblock%}
+{% block estilos%}
+<link rel="stylesheet" type="text/css" href="{% static 'css/table.css' %}" />
+{%endblock%}
+
+{% block contenido%}
+
+<a href="{%url 'usercreate'%}" class="btn btn-white">Crear Nuevo</a>
+<div class="table-wrapper">
+  <table class="fl-table">
+    <thead>
+      <tr>
+      <tr>
+        {% for titulo in campo %}
+        <th>{{ titulo.verbose_name.title }}</th>
+        {% endfor %}
+      </tr>
+      </tr>
+    </thead>
+    <tbody>
+      {% for elementos in usuarios %}
+      <tr>
+        <td>{{elementos.id}}</td>
+        <td>{{elementos.nombre}}</td>
+        <td>{{elementos.apellido}}</td>
+        <td>{{elementos.nombre_usuario}}</td>
+        <td>{{elementos.email}}</td>
+        <td>{{elementos.tfno}}</td>
+        <th>
+          {% if user.is_authenticated and perms.CRUD1.can_edit_user %}
+          <a href="{%url 'userdetails' elementos.id%}" class="btn btn-white">Ver mas</a>
+          <a href="{%url 'useredit' elementos.id%}" class="btn btn-white">Editar</a>
+          <a href="{%url 'userdelete' elementos.id%}" class="btn btn-white">Eliminar</a>
+          {% else %}
+          <a href="{%url 'userdetails' elementos.id%}" class="btn btn-white">Ver mas</a>
+          {% endif %}
+        </th>
+      </tr>
+
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{%endblock%}

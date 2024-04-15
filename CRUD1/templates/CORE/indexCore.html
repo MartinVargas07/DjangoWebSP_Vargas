@@ -1,0 +1,29 @@
+{% extends "predeterminados/base.html"%}
+{% load static %}
+{% block titulo%} IndexCore {%endblock%}
+{% block estilos%}
+<link rel="stylesheet" type="text/css" href="{% static 'css/table.css' %}" />
+{%endblock%}
+
+{% block contenido%}
+<a href="{%url 'crear_datos_venta'%}" class="btn btn-white">Cargar Nuevo Conjunto de datos</a>
+<a href="{%url 'realizar_prediccion'%}" class="btn btn-white">Hacer nueva prediccion</a>
+<a href=# class="btn btn-white">Comparacion</a>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+            <tr>
+                <th>Conjunto ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for dato in datos_venta %}
+            <tr>
+                <td>{{ dato.conjunto_id }}</td>
+                <th><a href="{%url 'grafica_ventas' dato.conjunto_id%}" class="btn btn-white">Ver mas</a></th>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{%endblock%}

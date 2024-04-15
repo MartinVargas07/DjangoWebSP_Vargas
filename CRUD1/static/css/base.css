@@ -1,0 +1,196 @@
+:root {
+  --vosc: #674ab3;
+  --vmedio: #a348a6;
+  --violeta: #9f63c4;
+  --vcla: #9075d8;
+  --vrosa: #cea2d7;
+  --orcuro: #333;
+  --blanco: #fff;
+  --backgroundnav: #272727;
+  --change: #8c8c8c;
+  --violeta: #9502ffcc;
+  --fuxia: #bb017acc;
+  --letraTitulo: "Monomaniac One", sans-serif;
+  --letraNormal: "Oswald", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: url("https://i.pinimg.com/originals/1a/f6/89/1af689d42bdb7686df444f22925f9e89.gif")
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/***************** Navbar *****************/
+
+.nav-bg {
+  background-image: linear-gradient(
+    to right bottom,
+    var(--violeta),
+    var(--fuxia)
+  );
+  list-style: none;
+  margin-bottom: 3rem;
+}
+
+.contenedor {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.navegacion-principal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .navegacion-principal {
+    flex-direction: column;
+  }
+}
+
+.navegacion-principal a {
+  font-family: var(--letraTitulo);
+  display: block;
+  text-align: center;
+  color: var(--blanco);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 1rem;
+}
+
+.navegacion-principal a:hover {
+  transition: 0.5s;
+  color: var(--oscuro);
+}
+
+/***************** Drop *****************/
+.dropdown-menu {
+    z-index: 1;
+    position: absolute;
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 10px 30px 0 #00000080;
+  }
+  
+  .dropdown-menu > li > a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .dropdown-menu > li:last-child > a {
+    border-bottom: none;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+/***************** Mensaje, creo *****************/
+
+.sep {
+  position: absolute;
+}
+
+.horizontal-span span {
+  display: block;
+  margin-right: 20px; /* Espacio entre los elementos span */
+}
+
+.alert {
+  position: relative;
+  top: 10;
+  left: 0;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  margin: 10px;
+  line-height: 1.8;
+  border-radius: 5px;
+  cursor: hand;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+.alertCheckbox {
+  display: none;
+}
+
+:checked + .alert {
+  display: none;
+}
+
+.alertText {
+  display: table;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 16px;
+}
+
+.alertClose {
+  float: right;
+  padding-top: 5px;
+  font-size: 10px;
+}
+
+.error {
+  background-color: #fee;
+  border: 1px solid #edd;
+  color: #a66;
+}
+
+/***************** Footer *****************/
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-image: linear-gradient(var(--violeta), var(--fuxia));
+  /* background-color: var(--vosc); */
+  color: var(--blanco);
+  padding: 20px;
+  margin-top: 7%;
+  font-family: var(--letraNormal);
+}
+
+.footer-section {
+  flex: 1;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  font-family: var(--letraTitulo);
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin-bottom: 5px;
+}
+
+.footer-section a {
+  color: var(--blanco);
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+
+/********************/

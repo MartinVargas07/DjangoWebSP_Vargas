@@ -1,0 +1,83 @@
+.bodyform {
+  align-items: center;
+  background-color: #414141;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding: 50px;
+  margin: auto;
+  border-radius: 1rem;
+  width: 75%;
+  margin-bottom: 1rem;
+}
+
+.form {
+  background-color: #4fc3a1;
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: 500px;
+  padding: 20px;
+  width: 320px;
+}
+
+.title {
+  color: #eee;
+  font-family: sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.subtitle {
+  color: #eee;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.input-container {
+  height: 50px;
+  position: relative;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.input {
+  background-color: #324960;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  font-size: 15px;
+  height: 50%;
+  outline: 0;
+  padding: 4px 20px 0;
+  width: 100%;
+}
+
+.submit {
+  background-color: #08d;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  margin-top: 10px;
+  outline: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.submit:active {
+  background-color: #06b;
+}
+
+.errormessage{
+    margin-top: -5px;
+    color: #b40000;
+    font-size: 12px;
+}

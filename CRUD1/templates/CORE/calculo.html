@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Predicciones de Venta</title>
+</head>
+
+<body>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            overflow: auto;
+        }
+    
+        .section {
+            flex: 1 0 30%;
+            min-width: 300px;
+        }
+    </style>
+    <h1>Predicciones de Venta</h1>
+    
+    <div class="container">
+        <div class="section">
+            <h2>Datos de la Predicción 1:</h2>
+            <table>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Valor Unitario</th>
+                    <th>Productos Vendidos</th>
+                    <th>Pronóstico</th>
+                </tr>
+                {% for fecha, valor, venta, pronostico in datos1 %}
+                <tr>
+                    <td>{{ fecha }}</td>
+                    <td>{{ valor }}</td>
+                    <td>{{ venta }}</td>
+                    <td>{{ pronostico }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    
+        <div class="section">
+            <h2>Datos de la Predicción 2:</h2>
+            <table>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Valor Unitario</th>
+                    <th>Productos Vendidos</th>
+                    <th>Pronóstico</th>
+                </tr>
+                {% for fecha, valor, venta, pronostico in datos2 %}
+                <tr>
+                    <td>{{ fecha }}</td>
+                    <td>{{ valor }}</td>
+                    <td>{{ venta }}</td>
+                    <td>{{ pronostico }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+     
+        <div class="section">
+            <h2>Diferencia:</h2>
+            <table>
+                <tr>
+                    <th>Diferencia de Productos</th>
+                    <th>Diferencia de Ganancia</th>
+                    <th>Porcentaje de Diferencia de Ganancia</th>
+                </tr>
+                {% for dif_prod, dif_gan, porcentaje in diferencia %}
+                <tr>
+                    <td>{{ dif_prod }}</td>
+                    <td>{{ dif_gan }}</td>
+                    <td>{{ porcentaje }}%</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+    
+</body>
+
+</html>

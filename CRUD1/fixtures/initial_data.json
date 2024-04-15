@@ -1,0 +1,242 @@
+[
+    {
+        "model": "CRUD1.usuario",
+        "pk": 1,
+        "fields": {
+            "nombre": "Fernando",
+            "apellido": "Lopez",
+            "nombre_usuario": "fer",
+            "email": "fer@gmail.com",
+            "tfno": "0954321096"
+        }
+    },
+    {
+        "model": "CRUD1.usuario",
+        "pk": 2,
+        "fields": {
+            "nombre": "Gabriel",
+            "apellido": "Pereza",
+            "nombre_usuario": "gar",
+            "email": "gar@gmail.com",
+            "tfno": "0954321084"
+        }
+    },
+    {
+        "model": "CRUD1.usuario",
+        "pk": 3,
+        "fields": {
+            "nombre": "Isis",
+            "apellido": "Rueda",
+            "nombre_usuario": "is",
+            "email": "isi@gmail.com",
+            "tfno": "0954321095"
+        }
+    },
+    {
+        "model": "CRUD1.usuario",
+        "pk": 4,
+        "fields": {
+            "nombre": "Maria",
+            "apellido": "Lopez",
+            "nombre_usuario": "mar",
+            "email": "mar@gmail.com",
+            "tfno": "0954321096"
+        }
+    },
+    {
+        "model": "CRUD1.vendedor",
+        "pk": 1,
+        "fields": {
+            "nombre": "Marco"
+        }
+    },
+    {
+        "model": "CRUD1.vendedor",
+        "pk": 2,
+        "fields": {
+            "nombre": "Ricardo"
+        }
+    },
+    {
+        "model": "CRUD1.vendedor",
+        "pk": 3,
+        "fields": {
+            "nombre": "Maria"
+        }
+    },
+    {
+        "model": "CRUD1.vendedor",
+        "pk": 4,
+        "fields": {
+            "nombre": "Jorge"
+        }
+    },
+    {
+        "model": "CRUD1.producto",
+        "pk": 1,
+        "fields": {
+            "nombre": "Televisores",
+            "precioUnitario": "400.00"
+        }
+    },
+    {
+        "model": "CRUD1.producto",
+        "pk": 2,
+        "fields": {
+            "nombre": "Celular",
+            "precioUnitario": "350.00"
+        }
+    },
+    {
+        "model": "CRUD1.producto",
+        "pk": 3,
+        "fields": {
+            "nombre": "Refrigeradora",
+            "precioUnitario": "625.00"
+        }
+    },
+    {
+        "model": "CRUD1.producto",
+        "pk": 4,
+        "fields": {
+            "nombre": "Computadoras de mesa",
+            "precioUnitario": "555.00"
+        }
+    },
+    {
+        "model": "CRUD1.producto",
+        "pk": 5,
+        "fields": {
+            "nombre": "Latops",
+            "precioUnitario": "345.00"
+        }
+    },
+    {
+        "model": "CRUD1.producto",
+        "pk": 6,
+        "fields": {
+            "nombre": "Monitores",
+            "precioUnitario": "125.00"
+        }
+    },
+    {
+        "model": "CRUD1.venta",
+        "pk": 1,
+        "fields": {
+            "vendedor": 1,
+            "producto": 1,
+            "cantidad": 4,
+            "monto": "1600.00",
+            "fecha_creacion": "2023-01-01",
+            "fecha_edicion": "2023-07-01T18:29:53.338Z"
+        }
+    },
+    {
+        "model": "CRUD1.venta",
+        "pk": 2,
+        "fields": {
+            "vendedor": 2,
+            "producto": 2,
+            "cantidad": 3,
+            "monto": "1050.00",
+            "fecha_creacion": "2023-01-02",
+            "fecha_edicion": "2023-07-01T18:35:49.582Z"
+        }
+    },
+    {
+        "model": "CRUD1.venta",
+        "pk": 3,
+        "fields": {
+            "vendedor": 3,
+            "producto": 1,
+            "cantidad": 2,
+            "monto": "800.00",
+            "fecha_creacion": "2022-07-01",
+            "fecha_edicion": "2023-07-01T18:42:19.589Z"
+        }
+    },
+    {
+        "model": "CRUD1.venta",
+        "pk": 4,
+        "fields": {
+            "vendedor": 3,
+            "producto": 5,
+            "cantidad": 4,
+            "monto": "1380.00",
+            "fecha_creacion": "2022-09-10",
+            "fecha_edicion": "2023-07-01T19:08:02.685Z"
+        }
+    },
+    {
+        "model": "CRUD1.venta",
+        "pk": 5,
+        "fields": {
+            "vendedor": 4,
+            "producto": 3,
+            "cantidad": 3,
+            "monto": "1875.00",
+            "fecha_creacion": "2022-09-22",
+            "fecha_edicion": "2023-07-01T19:08:11.509Z"
+        }
+    },
+    {
+        "model": "CRUD1.venta",
+        "pk": 6,
+        "fields": {
+            "vendedor": 1,
+            "producto": 4,
+            "cantidad": 2,
+            "monto": "1110.00",
+            "fecha_creacion": "2022-10-22",
+            "fecha_edicion": "2023-07-01T19:08:28.625Z"
+        }
+    },
+    {
+        "model": "CRUD1.venta",
+        "pk": 7,
+        "fields": {
+            "vendedor": 2,
+            "producto": 5,
+            "cantidad": 2,
+            "monto": "690.00",
+            "fecha_creacion": "2023-07-01",
+            "fecha_edicion": "2023-07-01T19:08:43.267Z"
+        }
+    },
+    {
+        "model": "CRUD1.datosventausuario",
+        "pk": "Enero",
+        "fields": {
+            "cod_usuario": 4,
+            "datos": "[{\"Fecha\": \"01/01/2023\", \"Ventas Producto A\": 10, \"Valor Unitario\": 15.99, \"Ganancia\": 159.9}, {\"Fecha\": \"02/01/2023\", \"Ventas Producto A\": 5, \"Valor Unitario\": 15.99, \"Ganancia\": 79.95}, {\"Fecha\": \"03/01/2023\", \"Ventas Producto A\": 8, \"Valor Unitario\": 15.99, \"Ganancia\": 127.92}, {\"Fecha\": \"04/01/2023\", \"Ventas Producto A\": 12, \"Valor Unitario\": 15.99, \"Ganancia\": 191.88}, {\"Fecha\": \"05/01/2023\", \"Ventas Producto A\": 6, \"Valor Unitario\": 15.99, \"Ganancia\": 95.94}, {\"Fecha\": \"06/01/2023\", \"Ventas Producto A\": 3, \"Valor Unitario\": 15.99, \"Ganancia\": 47.97}, {\"Fecha\": \"07/01/2023\", \"Ventas Producto A\": 9, \"Valor Unitario\": 15.99, \"Ganancia\": 143.91}, {\"Fecha\": \"08/01/2023\", \"Ventas Producto A\": 11, \"Valor Unitario\": 15.99, \"Ganancia\": 175.89}, {\"Fecha\": \"09/01/2023\", \"Ventas Producto A\": 7, \"Valor Unitario\": 15.99, \"Ganancia\": 111.93}, {\"Fecha\": \"10/01/2023\", \"Ventas Producto A\": 4, \"Valor Unitario\": 15.99, \"Ganancia\": 63.96}, {\"Fecha\": \"11/01/2023\", \"Ventas Producto A\": 5, \"Valor Unitario\": 15.99, \"Ganancia\": 79.95}, {\"Fecha\": \"12/01/2023\", \"Ventas Producto A\": 6, \"Valor Unitario\": 15.99, \"Ganancia\": 95.94}, {\"Fecha\": \"13/01/2023\", \"Ventas Producto A\": 8, \"Valor Unitario\": 15.99, \"Ganancia\": 127.92}, {\"Fecha\": \"14/01/2023\", \"Ventas Producto A\": 10, \"Valor Unitario\": 15.99, \"Ganancia\": 159.9}, {\"Fecha\": \"15/01/2023\", \"Ventas Producto A\": 12, \"Valor Unitario\": 15.99, \"Ganancia\": 191.88}, {\"Fecha\": \"16/01/2023\", \"Ventas Producto A\": 6, \"Valor Unitario\": 15.99, \"Ganancia\": 95.94}, {\"Fecha\": \"17/01/2023\", \"Ventas Producto A\": 9, \"Valor Unitario\": 15.99, \"Ganancia\": 143.91}, {\"Fecha\": \"18/01/2023\", \"Ventas Producto A\": 7, \"Valor Unitario\": 15.99, \"Ganancia\": 111.93}, {\"Fecha\": \"19/01/2023\", \"Ventas Producto A\": 5, \"Valor Unitario\": 15.99, \"Ganancia\": 79.95}, {\"Fecha\": \"20/01/2023\", \"Ventas Producto A\": 4, \"Valor Unitario\": 15.99, \"Ganancia\": 63.96}, {\"Fecha\": \"21/01/2023\", \"Ventas Producto A\": 6, \"Valor Unitario\": 15.99, \"Ganancia\": 95.94}, {\"Fecha\": \"22/01/2023\", \"Ventas Producto A\": 8, \"Valor Unitario\": 15.99, \"Ganancia\": 127.92}, {\"Fecha\": \"23/01/2023\", \"Ventas Producto A\": 11, \"Valor Unitario\": 15.99, \"Ganancia\": 175.89}, {\"Fecha\": \"24/01/2023\", \"Ventas Producto A\": 9, \"Valor Unitario\": 15.99, \"Ganancia\": 143.91}, {\"Fecha\": \"25/01/2023\", \"Ventas Producto A\": 7, \"Valor Unitario\": 15.99, \"Ganancia\": 111.93}, {\"Fecha\": \"26/01/2023\", \"Ventas Producto A\": 5, \"Valor Unitario\": 15.99, \"Ganancia\": 79.95}, {\"Fecha\": \"27/01/2023\", \"Ventas Producto A\": 6, \"Valor Unitario\": 15.99, \"Ganancia\": 95.94}, {\"Fecha\": \"28/01/2023\", \"Ventas Producto A\": 10, \"Valor Unitario\": 15.99, \"Ganancia\": 159.9}, {\"Fecha\": \"29/01/2023\", \"Ventas Producto A\": 12, \"Valor Unitario\": 15.99, \"Ganancia\": 191.88}, {\"Fecha\": \"30/01/2023\", \"Ventas Producto A\": 8, \"Valor Unitario\": 15.99, \"Ganancia\": 127.92}, {\"Fecha\": \"31/01/2023\", \"Ventas Producto A\": 7, \"Valor Unitario\": 15.99, \"Ganancia\": 111.93}]"
+        }
+    },
+    {
+        "model": "CRUD1.datosventausuario",
+        "pk": "Enero2",
+        "fields": {
+            "cod_usuario": 5,
+            "datos": "[{\"Fecha\": \"01/01/2023\", \"Ventas Producto A\": 11, \"Valor Unitario\": 12.99, \"Ganancia\": 142.89}, {\"Fecha\": \"02/01/2023\", \"Ventas Producto A\": 8, \"Valor Unitario\": 12.99, \"Ganancia\": 103.92}, {\"Fecha\": \"03/01/2023\", \"Ventas Producto A\": 10, \"Valor Unitario\": 12.99, \"Ganancia\": 129.9}, {\"Fecha\": \"04/01/2023\", \"Ventas Producto A\": 9, \"Valor Unitario\": 12.99, \"Ganancia\": 116.91}, {\"Fecha\": \"05/01/2023\", \"Ventas Producto A\": 8, \"Valor Unitario\": 12.99, \"Ganancia\": 103.92}, {\"Fecha\": \"06/01/2023\", \"Ventas Producto A\": 7, \"Valor Unitario\": 12.99, \"Ganancia\": 90.93}, {\"Fecha\": \"07/01/2023\", \"Ventas Producto A\": 10, \"Valor Unitario\": 12.99, \"Ganancia\": 129.9}, {\"Fecha\": \"08/01/2023\", \"Ventas Producto A\": 12, \"Valor Unitario\": 12.99, \"Ganancia\": 155.88}, {\"Fecha\": \"09/01/2023\", \"Ventas Producto A\": 13, \"Valor Unitario\": 12.99, \"Ganancia\": 168.87}, {\"Fecha\": \"10/01/2023\", \"Ventas Producto A\": 11, \"Valor Unitario\": 12.99, \"Ganancia\": 142.89}, {\"Fecha\": \"11/01/2023\", \"Ventas Producto A\": 7, \"Valor Unitario\": 12.99, \"Ganancia\": 90.93}, {\"Fecha\": \"12/01/2023\", \"Ventas Producto A\": 7, \"Valor Unitario\": 12.99, \"Ganancia\": 90.93}, {\"Fecha\": \"13/01/2023\", \"Ventas Producto A\": 10, \"Valor Unitario\": 12.99, \"Ganancia\": 129.9}, {\"Fecha\": \"14/01/2023\", \"Ventas Producto A\": 8, \"Valor Unitario\": 12.99, \"Ganancia\": 103.92}, {\"Fecha\": \"15/01/2023\", \"Ventas Producto A\": 7, \"Valor Unitario\": 12.99, \"Ganancia\": 90.93}, {\"Fecha\": \"16/01/2023\", \"Ventas Producto A\": 9, \"Valor Unitario\": 12.99, \"Ganancia\": 116.91}, {\"Fecha\": \"17/01/2023\", \"Ventas Producto A\": 10, \"Valor Unitario\": 12.99, \"Ganancia\": 129.9}, {\"Fecha\": \"18/01/2023\", \"Ventas Producto A\": 12, \"Valor Unitario\": 12.99, \"Ganancia\": 155.88}, {\"Fecha\": \"19/01/2023\", \"Ventas Producto A\": 14, \"Valor Unitario\": 12.99, \"Ganancia\": 181.86}, {\"Fecha\": \"20/01/2023\", \"Ventas Producto A\": 11, \"Valor Unitario\": 12.99, \"Ganancia\": 142.89}, {\"Fecha\": \"21/01/2023\", \"Ventas Producto A\": 9, \"Valor Unitario\": 12.99, \"Ganancia\": 116.91}, {\"Fecha\": \"22/01/2023\", \"Ventas Producto A\": 10, \"Valor Unitario\": 12.99, \"Ganancia\": 129.9}, {\"Fecha\": \"23/01/2023\", \"Ventas Producto A\": 12, \"Valor Unitario\": 12.99, \"Ganancia\": 155.88}, {\"Fecha\": \"24/01/2023\", \"Ventas Producto A\": 9, \"Valor Unitario\": 12.99, \"Ganancia\": 116.91}, {\"Fecha\": \"25/01/2023\", \"Ventas Producto A\": 7, \"Valor Unitario\": 12.99, \"Ganancia\": 90.93}, {\"Fecha\": \"26/01/2023\", \"Ventas Producto A\": 9, \"Valor Unitario\": 12.99, \"Ganancia\": 116.91}, {\"Fecha\": \"27/01/2023\", \"Ventas Producto A\": 10, \"Valor Unitario\": 12.99, \"Ganancia\": 129.9}, {\"Fecha\": \"28/01/2023\", \"Ventas Producto A\": 11, \"Valor Unitario\": 12.99, \"Ganancia\": 142.89}, {\"Fecha\": \"29/01/2023\", \"Ventas Producto A\": 10, \"Valor Unitario\": 12.99, \"Ganancia\": 129.9}, {\"Fecha\": \"30/01/2023\", \"Ventas Producto A\": 11, \"Valor Unitario\": 12.99, \"Ganancia\": 142.89}, {\"Fecha\": \"31/01/2023\", \"Ventas Producto A\": 12, \"Valor Unitario\": 12.99, \"Ganancia\": 155.88}]"
+        }
+    },
+    {
+        "model": "CRUD1.prediccionventa",
+        "pk": 22,
+        "fields": {
+            "cod_usuario": 4,
+            "modelo_usado": "sarima",
+            "cod_entrenamiento_usuario": "Enero",
+            "datos": "[{\"Fecha\":\"01\\/02\\/2023\",\"Productos Vendidos\":7,\"Valor Unitario\":15.99,\"Pronostico\":113.11},{\"Fecha\":\"02\\/02\\/2023\",\"Productos Vendidos\":6,\"Valor Unitario\":15.99,\"Pronostico\":110.97},{\"Fecha\":\"03\\/02\\/2023\",\"Productos Vendidos\":6,\"Valor Unitario\":15.99,\"Pronostico\":107.6},{\"Fecha\":\"04\\/02\\/2023\",\"Productos Vendidos\":7,\"Valor Unitario\":15.99,\"Pronostico\":122.65},{\"Fecha\":\"05\\/02\\/2023\",\"Productos Vendidos\":6,\"Valor Unitario\":15.99,\"Pronostico\":98.08},{\"Fecha\":\"06\\/02\\/2023\",\"Productos Vendidos\":6,\"Valor Unitario\":15.99,\"Pronostico\":107.78},{\"Fecha\":\"07\\/02\\/2023\",\"Productos Vendidos\":9,\"Valor Unitario\":15.99,\"Pronostico\":146.99},{\"Fecha\":\"08\\/02\\/2023\",\"Productos Vendidos\":10,\"Valor Unitario\":15.99,\"Pronostico\":162.53},{\"Fecha\":\"09\\/02\\/2023\",\"Productos Vendidos\":6,\"Valor Unitario\":15.99,\"Pronostico\":99.28},{\"Fecha\":\"10\\/02\\/2023\",\"Productos Vendidos\":11,\"Valor Unitario\":15.99,\"Pronostico\":191.86},{\"Fecha\":\"11\\/02\\/2023\",\"Productos Vendidos\":9,\"Valor Unitario\":15.99,\"Pronostico\":147.03},{\"Fecha\":\"12\\/02\\/2023\",\"Productos Vendidos\":4,\"Valor Unitario\":15.99,\"Pronostico\":76.99},{\"Fecha\":\"13\\/02\\/2023\",\"Productos Vendidos\":3,\"Valor Unitario\":15.99,\"Pronostico\":54.73},{\"Fecha\":\"14\\/02\\/2023\",\"Productos Vendidos\":6,\"Valor Unitario\":15.99,\"Pronostico\":101.87},{\"Fecha\":\"15\\/02\\/2023\",\"Productos Vendidos\":8,\"Valor Unitario\":15.99,\"Pronostico\":138.57},{\"Fecha\":\"16\\/02\\/2023\",\"Productos Vendidos\":11,\"Valor Unitario\":15.99,\"Pronostico\":179.51},{\"Fecha\":\"17\\/02\\/2023\",\"Productos Vendidos\":9,\"Valor Unitario\":15.99,\"Pronostico\":144.23},{\"Fecha\":\"18\\/02\\/2023\",\"Productos Vendidos\":7,\"Valor Unitario\":15.99,\"Pronostico\":115.46},{\"Fecha\":\"19\\/02\\/2023\",\"Productos Vendidos\":5,\"Valor Unitario\":15.99,\"Pronostico\":86.78},{\"Fecha\":\"20\\/02\\/2023\",\"Productos Vendidos\":6,\"Valor Unitario\":15.99,\"Pronostico\":101.95},{\"Fecha\":\"21\\/02\\/2023\",\"Productos Vendidos\":10,\"Valor Unitario\":15.99,\"Pronostico\":162.47},{\"Fecha\":\"22\\/02\\/2023\",\"Productos Vendidos\":12,\"Valor Unitario\":15.99,\"Pronostico\":195.82},{\"Fecha\":\"23\\/02\\/2023\",\"Productos Vendidos\":8,\"Valor Unitario\":15.99,\"Pronostico\":132.72},{\"Fecha\":\"24\\/02\\/2023\",\"Productos Vendidos\":7,\"Valor Unitario\":15.99,\"Pronostico\":115.67},{\"Fecha\":\"25\\/02\\/2023\",\"Productos Vendidos\":7,\"Valor Unitario\":15.99,\"Pronostico\":116.18},{\"Fecha\":\"26\\/02\\/2023\",\"Productos Vendidos\":7,\"Valor Unitario\":15.99,\"Pronostico\":114.95},{\"Fecha\":\"27\\/02\\/2023\",\"Productos Vendidos\":7,\"Valor Unitario\":15.99,\"Pronostico\":112.46},{\"Fecha\":\"28\\/02\\/2023\",\"Productos Vendidos\":8,\"Valor Unitario\":15.99,\"Pronostico\":128.03}]"
+        }
+    },
+    {
+        "model": "CRUD1.prediccionventa",
+        "pk": 24,
+        "fields": {
+            "cod_usuario": 5,
+            "modelo_usado": "sarima",
+            "cod_entrenamiento_usuario": "Enero2",
+            "datos": "[{\"Fecha\":\"01\\/02\\/2023\",\"Productos Vendidos\":12,\"Valor Unitario\":12.99,\"Pronostico\":165.3},{\"Fecha\":\"02\\/02\\/2023\",\"Productos Vendidos\":12,\"Valor Unitario\":12.99,\"Pronostico\":164.35},{\"Fecha\":\"03\\/02\\/2023\",\"Productos Vendidos\":12,\"Valor Unitario\":12.99,\"Pronostico\":156.52},{\"Fecha\":\"04\\/02\\/2023\",\"Productos Vendidos\":11,\"Valor Unitario\":12.99,\"Pronostico\":143.99},{\"Fecha\":\"05\\/02\\/2023\",\"Productos Vendidos\":8,\"Valor Unitario\":12.99,\"Pronostico\":105.11},{\"Fecha\":\"06\\/02\\/2023\",\"Productos Vendidos\":8,\"Valor Unitario\":12.99,\"Pronostico\":105.8},{\"Fecha\":\"07\\/02\\/2023\",\"Productos Vendidos\":10,\"Valor Unitario\":12.99,\"Pronostico\":131.39},{\"Fecha\":\"08\\/02\\/2023\",\"Productos Vendidos\":11,\"Valor Unitario\":12.99,\"Pronostico\":149.68},{\"Fecha\":\"09\\/02\\/2023\",\"Productos Vendidos\":11,\"Valor Unitario\":12.99,\"Pronostico\":154.07},{\"Fecha\":\"10\\/02\\/2023\",\"Productos Vendidos\":10,\"Valor Unitario\":12.99,\"Pronostico\":134.48},{\"Fecha\":\"11\\/02\\/2023\",\"Productos Vendidos\":10,\"Valor Unitario\":12.99,\"Pronostico\":142.29},{\"Fecha\":\"12\\/02\\/2023\",\"Productos Vendidos\":12,\"Valor Unitario\":12.99,\"Pronostico\":165.19},{\"Fecha\":\"13\\/02\\/2023\",\"Productos Vendidos\":13,\"Valor Unitario\":12.99,\"Pronostico\":179.87},{\"Fecha\":\"14\\/02\\/2023\",\"Productos Vendidos\":13,\"Valor Unitario\":12.99,\"Pronostico\":179.46},{\"Fecha\":\"15\\/02\\/2023\",\"Productos Vendidos\":12,\"Valor Unitario\":12.99,\"Pronostico\":164.52},{\"Fecha\":\"16\\/02\\/2023\",\"Productos Vendidos\":11,\"Valor Unitario\":12.99,\"Pronostico\":143.52},{\"Fecha\":\"17\\/02\\/2023\",\"Productos Vendidos\":8,\"Valor Unitario\":12.99,\"Pronostico\":112.3},{\"Fecha\":\"18\\/02\\/2023\",\"Productos Vendidos\":9,\"Valor Unitario\":12.99,\"Pronostico\":124.74},{\"Fecha\":\"19\\/02\\/2023\",\"Productos Vendidos\":10,\"Valor Unitario\":12.99,\"Pronostico\":141.72},{\"Fecha\":\"20\\/02\\/2023\",\"Productos Vendidos\":12,\"Valor Unitario\":12.99,\"Pronostico\":159.02},{\"Fecha\":\"21\\/02\\/2023\",\"Productos Vendidos\":12,\"Valor Unitario\":12.99,\"Pronostico\":161.08},{\"Fecha\":\"22\\/02\\/2023\",\"Productos Vendidos\":10,\"Valor Unitario\":12.99,\"Pronostico\":142.69},{\"Fecha\":\"23\\/02\\/2023\",\"Productos Vendidos\":11,\"Valor Unitario\":12.99,\"Pronostico\":149.62},{\"Fecha\":\"24\\/02\\/2023\",\"Productos Vendidos\":13,\"Valor Unitario\":12.99,\"Pronostico\":176.42},{\"Fecha\":\"25\\/02\\/2023\",\"Productos Vendidos\":14,\"Valor Unitario\":12.99,\"Pronostico\":191.16},{\"Fecha\":\"26\\/02\\/2023\",\"Productos Vendidos\":14,\"Valor Unitario\":12.99,\"Pronostico\":189.99},{\"Fecha\":\"27\\/02\\/2023\",\"Productos Vendidos\":13,\"Valor Unitario\":12.99,\"Pronostico\":172.16},{\"Fecha\":\"28\\/02\\/2023\",\"Productos Vendidos\":11,\"Valor Unitario\":12.99,\"Pronostico\":148.02}]"
+        }
+    }
+]

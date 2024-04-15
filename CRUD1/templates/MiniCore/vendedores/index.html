@@ -1,0 +1,31 @@
+{% extends "predeterminados/base.html"%}
+{% load static %}
+{% block titulo%} Vendedores {%endblock%}
+{% block estilos%}
+<link rel="stylesheet" type="text/css" href="{% static 'css/table.css' %}" />
+{%endblock%}
+{% block contenido%}
+<a href="{%url 'vendedorescreate'%}" class="btn btn-white">Crear Nuevo</a>
+<div class="table-wrapper">
+  <table class="fl-table">
+    <thead>
+      <tr>
+      <tr>
+        {% for titulo in campo %}
+        <th>{{ titulo.verbose_name.title }}</th>
+        {% endfor %}
+      </tr>
+      </tr>
+    </thead>
+    <tbody>
+      {% for elementos in vendedores %}
+      <tr>
+        <td>{{elementos.id}}</td>
+        <td>{{elementos.nombre}}</td>
+      </tr>
+
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{%endblock%}

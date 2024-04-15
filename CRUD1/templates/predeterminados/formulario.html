@@ -1,0 +1,54 @@
+<head>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}" />
+</head>
+<div class="bodyform">
+  <div class="form">
+    <div class="title">Ingrese sus datos</div>
+    <form enctype="multipart/form-data" method="post">
+      {% csrf_token %} {% for campo in formulario %}
+      <div class="input-container">
+        <!-- <input
+          type="{{campo.field.widget.input_type}}"
+          class="input"
+          name="{{campo.name}}"
+          id=""
+          aria-describedby="helpeId"
+          placeholder="{{campo.label}}"
+          value="{{campo.value | default:''}}"
+        />
+        <div class="errormessage">{{campo.errors}}</div> -->
+        {% if campo.field.widget.input_type == 'datetime-local' %}
+
+            <label for="{{ campo.id_for_label }}">{{ campo.label }}</label>
+            <input type="datetime-local" class="input" name="{{ campo.name }}" id="{{ campo.id_for_label }}" value="{{ campo.value|default:'' }}">
+
+        {% elif campo.field.widget.input_type == 'select' %}
+
+            <label for="{{ campo.id_for_label }}">{{ campo.label }}</label>
+            <select class="input" name="{{ campo.name }}" id="{{ campo.id_for_label }}">
+                {% for opcion in campo.field.choices %}
+                    <option value="{{ opcion.0 }}" {% if opcion.0 == campo.value %}selected{% endif %}>{{ opcion.1 }}</option>
+                {% endfor %}
+            </select>
+
+        {% elif campo.field.widget.input_type == 'Textarea' %}
+
+            <label for="{{ campo.id_for_label }}">{{ campo.label }}</label>
+            <textarea class="input" name="{{ campo.name }}" id="{{ campo.id_for_label }}" placeholder="{{ campo.label }}" rows="5">{{ campo.value|default:'' }}</textarea>
+
+        {% else %}
+
+            <label for="{{ campo.id_for_label }}">{{ campo.label }}</label>
+            <input type="{{ campo.field.widget.input_type }}" class="input" name="{{ campo.name }}" id="{{ campo.id_for_label }}" value="{{ campo.value|default:'' }}">
+
+        {% endif %}
+        
+        <div class="errormessage">{{ campo.errors }}</div>
+      </div>
+
+      {% endfor %}
+      <input class="submit" type="submit" value="Guardar" />
+    </form>
+  </div>
+</div>

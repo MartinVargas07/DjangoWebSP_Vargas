@@ -1,0 +1,74 @@
+Contratos
+<!-- {% extends "predeterminados/base.html"%}
+
+{% load static %}
+{% block titulo%} Index {%endblock%}
+{% block estilos%}
+<link rel="stylesheet" type="text/css" href="{% static 'css/table.css' %}" />
+{%endblock%}
+
+{% block contenido%}
+
+<div class="table-wrapper">
+  <table class="fl-table">
+    <thead>
+      <tr>
+        <tr>
+          {% for titulo in campo %}
+              <th>{{ titulo.verbose_name.title }}</th>
+          {% endfor %}
+      </tr>
+      </tr>
+    </thead>
+    <tbody>
+      {% for elementos in contratos %}
+      <tr>
+        <td>{{elementos.id}}</td>
+        <td>{{elementos.cliente.nombre}}</td>
+        <td>{{elementos.descripcion}}</td>
+        <td>{{elementos.precio}}</td>
+        <td>{{elementos.fecha_creacion}}</td>
+        <td>{{elementos.fecha_edicion}}</td>
+      </tr>
+
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{%endblock%} -->
+
+
+Cliente
+<!-- {% extends "predeterminados/base.html"%}
+
+{% load static %}
+{% block titulo%} Index {%endblock%}
+{% block estilos%}
+<link rel="stylesheet" type="text/css" href="{% static 'css/table.css' %}" />
+{%endblock%}
+
+{% block contenido%}
+
+<div class="table-wrapper">
+  <table class="fl-table">
+    <thead>
+      <tr>
+        <tr>
+          {% for titulo in campo %}
+              <th>{{ titulo.verbose_name.title }}</th>
+          {% endfor %}
+      </tr>
+      </tr>
+    </thead>
+    <tbody>
+      {% for elementos in clientes %}
+      <tr>
+        <td>{{elementos.id}}</td>
+        <td>{{elementos.nombre}}</td>
+      </tr>
+
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{%endblock%} -->

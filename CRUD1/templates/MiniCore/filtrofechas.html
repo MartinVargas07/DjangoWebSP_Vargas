@@ -1,0 +1,72 @@
+{% extends "predeterminados/base.html"%}
+{% load static %}
+{% block titulo%} Fitro {%endblock%}
+{% block estilos%}
+<link rel="stylesheet" type="text/css" href="{% static 'css/table.css' %}" />
+<style>
+  .ContenedorT {
+    margin: 2%;
+    background: transparent;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 10px 30px 0 #00000080;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+
+  .ContenedorT input {
+    margin-bottom: 10px;
+  }
+</style>
+{%endblock%}
+{% block contenido%}
+<div>
+  <form method="get" class="ContenedorT">
+    {% csrf_token %} {{ form }}
+    <button class="button" type="submit">Buscar</button>
+  </form>
+</div>
+{% if results %}
+<div class="table-wrapper">
+  <table class="fl-table">
+    <thead>
+      <tr>
+        <th>Vendedore</th>
+        <th>Ventas</th>
+        <th>Monto</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for result in results %}
+      <tr>
+        <td>{{ result.vendedor.nombre }}</td>
+        <td>{{ result.ventas }}</td>
+        <td>{{ result.total_monto|floatformat:2 }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+<div class="ContenedorT">
+  <span>Vendedores: {{ summary.vendedores }}</span>
+  <span>Ventas: {{ summary.ventas }}</span>
+  <span>Monto total: {{ summary.total_monto|floatformat:2 }}</span>
+</div>
+{% else %}
+<div role="alert">
+  <label>
+    <input type="checkbox" class="alertCheckbox" autocomplete="off" />
+    <div class="alert error">
+      <span class="alertClose">X</span>
+      <span class="alertText">No se encontraron resultados
+        <br class="clear" /></span>
+    </div>
+  </label>
+</div>
+{% endif %}
+{%endblock%}

@@ -1,0 +1,70 @@
+{% extends "predeterminados/base.html"%}
+<!-- <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+</head>
+<body>
+    <p>ID: {{usuario.id}}</p>
+    <p>Nombre: {{usuario.nombre}}</p>
+    <p>Apellido: {{usuario.apellido}}</p>
+    <p>Nombre de usuario: {{usuario.nombre_usuario}}</p>
+    <p>Correo electronico: {{usuario.email}}</p>
+    <p>Telefono: {{usuario.tfno}}</p>
+</body>
+</html> -->
+{% load static %}
+{% block titulo%} Details {%endblock%}
+{% block estilos%}
+<link rel="stylesheet" type="text/css" href="{% static 'css/profile.css' %}" />
+{%endblock%}
+
+{% block contenido%}
+
+<div class="body">
+  <div class="container">
+    <div class="box">
+      <img src="{% static 'img/unnamed.jpg'%}" alt="" />
+      <ul>
+        <li>{{usuario.nombre_usuario}}</li>
+        <li>{{usuario.email}}</li>
+        <li>{{usuario.tfno}}</li>
+      </ul>
+    </div>
+    <div class="About">
+      <ul>
+        <h1>Datos</h1>
+      </ul>
+      <ul>
+        <h3>ID</h3>
+        <li>{{usuario.id}}</li>
+      </ul>
+      <ul>
+        <h3>Nombre</h3>
+        <li>{{usuario.nombre}}</li>
+      </ul>
+      <ul>
+        <h3>Apellido</h3>
+        <li>{{usuario.apellido}}</li>
+      </ul>
+      <ul>
+        <h3>More Info</h3>
+        <p>
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+          using Lorem Ipsum is that it has a more-or-less normal distribution of
+          letters, as opposed to using 'Content here, content here', making it
+          look like readable English. Many desktop publishing packages and web
+          page editors now use Lorem Ipsum as their default model text, and a
+          search for 'lorem ipsum' will uncover many web sites still in their
+          infancy. Various versions have evolved over the years, sometimes by
+          accident, sometimes on purpose (injected humour and the like).
+        </p>
+      </ul>
+    </div>
+  </div>
+</div>
+{%endblock%}
