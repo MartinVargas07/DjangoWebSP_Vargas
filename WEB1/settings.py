@@ -17,28 +17,25 @@ from dotenv import load_dotenv
 import dj_database_url
 import environ
 
+# Load environment variables
 load_dotenv()
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Load environment variables
-env = environ.Env()
-environ.Env.read_env(env_file=os.path.join('config', 'clave.env.production'))
-environ.Env.read_env(env_file=os.path.join('config', 'bddrender.env'))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env("SECRET_KEY")
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG", default=False)
+DEBUG = os.getenv("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = ["*"]
-
+# Set your domain in ALLOWED_HOSTS for better security
+ALLOWED_HOSTS = ["djangowebsp-vargas.onrender.com", "localhost"]
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -51,7 +48,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # Middleware for serving static files with WhiteNoise
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -85,11 +82,10 @@ WSGI_APPLICATION = 'WEB1.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-     'default': dj_database_url.config(
-         default=os.environ.get('postgres://martin_vargas:S4fOytU53WgP0MFg9JPp62OP3d9xyMl1@dpg-coebgoa0si5c739dt6e0-a.oregon-postgres.render.com/db_dango_web')
-     )
- }
-
+    'default': dj_database_url.config(
+        default=os.getenv("DATABASE_URL")
+    )
+}
 
 
 # Password validation
@@ -124,23 +120,21 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "DJANGOWEB-MAIN", "static")]
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
+# Static files settings for Render
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# This production code might break development mode, so we check whether we're in DEBUG mode
-if not DEBUG:
-    # Tell Django to copy static assets into a path called `staticfiles` (this is specific to Render)
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-    # Enable the WhiteNoise storage backend, which compresses static files to reduce disk use
-    # and renames the files with unique names for each version to support long-term caching
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# Use WhiteNoise to serve static files in production
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Para el inicio de sesion personalizado
+# Custom login settings
 LOGIN_URL = 'login_or_register'
 LOGIN_REDIRECT_URL = reverse_lazy('index')
