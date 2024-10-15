@@ -1,4 +1,6 @@
 .env
 .env.local
 .env.production
-.vs/
+.vs
+*.sqlite
+*.sqlite-journal
